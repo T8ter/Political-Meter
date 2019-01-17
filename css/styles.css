@@ -9,3 +9,18 @@
 #moderate {
   display: none;
 }
+
+#invalid-number {
+  display: none;
+  color: red;
+}
+
+#invalid-number2 {
+  display: none;
+  color: red;
+}
+
+#invalid-number3 {
+  display: none;
+  color: red;
+}
