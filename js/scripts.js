@@ -12,7 +12,7 @@ $(document).ready(function() {
     var relig = parseInt($("input#religious").val());
 
 
-    if (soc > 5 || soc <= 0 || econ > 5 || econ <= 0 || relig > 5 || relig <= 0) {
+    if (soc > 5 || soc <= 0 || econ > 5 || econ <= 0 || relig > 5 || relig <= 0 || soc) {
       $("#moderate").hide();
       $("#conservative").hide();
       $("#liberal").hide();
@@ -46,10 +46,19 @@ $(document).ready(function() {
       $("#invalid-number").hide();
       $("#invalid-number2").hide();
       $("#invalid-number3").hide();
+    } else {
+      if (!soc) {
+        $("#invalid-number").show();
+      }
+      if (!econ) {
+        $("#invalid-number2").show();
+      }
+      if (!relig) {
+        $("#invalid-number3").show();
+      }
     };
 
-
-
+console.log(soc);
 
 
 
