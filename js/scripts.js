@@ -12,20 +12,9 @@ $(document).ready(function() {
     var relig = parseInt($("input#religious").val());
 
 
-    if (soc > 5 || soc <= 0 || econ > 5 || econ <= 0 || relig > 5 || relig <= 0 || soc) {
-      $("#moderate").hide();
-      $("#conservative").hide();
-      $("#liberal").hide();
-      if (soc > 5 || soc <= 0) {
-        $("#invalid-number").show();
-      }
-      if (econ > 5 || econ <= 0) {
-        $("#invalid-number2").show();
-      }
-      if (relig > 5 || relig <= 0) {
-        $("#invalid-number3").show();
-      }
-    } else if (partisan(soc, econ, relig) > 8) {
+
+
+    if (partisan(soc, econ, relig) > 8) {
       $("#conservative").show();
       $("#liberal").hide();
       $("#moderate").hide();
@@ -46,19 +35,20 @@ $(document).ready(function() {
       $("#invalid-number").hide();
       $("#invalid-number2").hide();
       $("#invalid-number3").hide();
-    } else {
-      if (!soc) {
+    } else { (soc > 5 || soc <= 0 || econ > 5 || econ <= 0 || relig > 5 || relig <= 0 || soc) 
+      $("#moderate").hide();
+      $("#conservative").hide();
+      $("#liberal").hide();
+      if (soc > 5 || soc <= 0) {
         $("#invalid-number").show();
       }
-      if (!econ) {
+      if (econ > 5 || econ <= 0) {
         $("#invalid-number2").show();
       }
-      if (!relig) {
+      if (relig > 5 || relig <= 0) {
         $("#invalid-number3").show();
-      }
-    };
+      }}
 
-console.log(soc);
 
 
 
